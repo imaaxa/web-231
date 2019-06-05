@@ -2,9 +2,9 @@
 ============================================
 ; Title:  exercise-2.4.js
 ; Author: Cory Gilliam
-; Date:   4 June 2019
+; Date:   5 June 2019
 ; Modified By: Cory Gilliam
-; Description: Outputs three sentences using a function and function properties.
+; Description: Outputs three sentences using different functions.
 ;===========================================
 */
 
@@ -85,7 +85,7 @@ function convertToFloat(value) {
 }
 
 // Variables
-var date = dateWriter(2019,6,5);
+var date = dateWriter(2019,1,5);
 var temperature = formatNumber(33.6, 1);
 var age = '43';
 var savings = '200000';
