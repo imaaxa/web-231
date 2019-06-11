@@ -8,16 +8,16 @@ Introduction to JavaScript
 
 Week 1
 ------
-* Chapter 1
+* Chapter 1: Introduction to JavaScript
   * Core JavaScript
   * Client-Side JavaScript
-* Chapter 2
+* Chapter 2: Lexical Structure
   * Character Set
   * Comments
   * Literals
   * Identifiers and Reserved Words
   * Optional Semicolons
-* Chapter 3
+* Chapter 3: Types, Values, and Variables
   * Numbers
   * Text
   * Boolean Values
@@ -31,7 +31,7 @@ Week 1
 
 Week 2
 ------
-* Chapter 8
+* Chapter 8: Functions
   * Defining Functions
   * Invoking Functions
   * Function Arguments and Parameters
@@ -40,3 +40,16 @@ Week 2
   * Closures
   * Function Properties, Methods, and Constructor
   * Functional Programming
+  
+Week 3
+------
+* Chapter 5: Statements
+  * Expression Statements
+  * Compound and Empty Statements
+  * Declaration Statements
+  * Conditionals
+  * Loops
+  * Jumps
+  * Miscellaneous Statements
+  * Summary of JavaScript Statements
+  
