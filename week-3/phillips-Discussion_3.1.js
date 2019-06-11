@@ -21,7 +21,9 @@ const header = require("../gilliam-header");
 console.log(header.display('Cory', 'Gilliam', 'Assignment 3.1: Fixed'));
 
 // Variables:
-/* - Declare all variables at top of program to help with readability. */
+/*
+  - Declare all variables at top of program to help with readability.
+*/
 var message = '';
 var name = '';
 var age = '';
