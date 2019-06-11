@@ -8,7 +8,7 @@
 ;===========================================
 */
 
-// Start program
+// Start program:
 
 // The header file, & output, to be included with all JS programs for this course/cohort.
 const header = require('../gilliam-header.js');
@@ -85,7 +85,7 @@ function logMatch(value1, value2) {
   console.log(value1 + ' and ' + value2 + ' do match!');
 }
 
-// Variables
+// Variables:
 var value1 = 'Truck';
 var value2 = 'Car';
 var value3 = 'Bike';
@@ -120,4 +120,4 @@ if (match(value5, value6)) {
   logMismatch(value5, value6);
 }
 
-// End program
+// End program:
