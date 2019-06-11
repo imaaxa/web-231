@@ -29,6 +29,7 @@ var username = '';
 /*
   - If statement is declared like: if (condition) {}.
   - Curly bracket are optional for single line, but the do help with readability.
+  - Parentheses are not optional.They need to surround condition.
   - Strings need to be inside of single or double quotes, followed by ;.
 */
 // If username is null or not defined, define it
