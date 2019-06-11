@@ -12,14 +12,14 @@ Week 1
   * Core JavaScript
   * Client-Side JavaScript
   
-* Chapter 2: Lexical Structure
+* **Chapter 2**: *Lexical Structure*
   * Character Set
   * Comments
   * Literals
   * Identifiers and Reserved Words
   * Optional Semicolons
   
-* Chapter 3: Types, Values, and Variables
+* **Chapter 3**: *Types, Values, and Variables*
   * Numbers
   * Text
   * Boolean Values
@@ -33,7 +33,7 @@ Week 1
 
 Week 2
 ------
-* Chapter 8: Functions
+* **Chapter 8**: *Functions*
   * Defining Functions
   * Invoking Functions
   * Function Arguments and Parameters
@@ -45,7 +45,7 @@ Week 2
   
 Week 3
 ------
-* Chapter 5: Statements
+* **Chapter 5**: *Statements*
   * Expression Statements
   * Compound and Empty Statements
   * Declaration Statements
