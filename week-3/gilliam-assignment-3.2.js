@@ -40,11 +40,29 @@ console.log(header.display('Cory', 'Gilliam', 'Exercise 3.2'));
  * @param {any} value2
  * @return {bool} true / false
 */
-function matchWithTwoParameters(value1, value2) {
+function match(value1, value2) {
+  // Return true or false based upon value and data type
   if (value1 === value2) {
     return true;
   }
   return false;
+
+  /*
+  Alternate ways to accomplish the same task:
+    if (value1 === value2) {
+      return true;
+    } else {
+      return false;
+    }
+
+    switch (value1 === value2) {
+      case true:
+        return true;
+      default:
+        return false;
+    } // return statements makes the break; unneeded
+  */
+
 }
 
 /**
@@ -77,20 +95,26 @@ var value6 = 'Three';
 
 // Output -see Expected output: above
 console.log('\n// output from the match() function');
-console.log(matchWithTwoParameters(value1, value2) + '');
-console.log(matchWithTwoParameters(value3, value4) + '\n');
+console.log(match(value1, value2) + '');
+console.log(match(value3, value4) + '\n');
 console.log('// output from the if...else blocks');
-if (matchWithTwoParameters(value1, value2)) {
+
+// Test first set of values
+if (match(value1, value2)) {
   logMatch(value1, value2);
 } else {
   logMismatch(value1, value2);
 }
-if (matchWithTwoParameters(value3, value4)) {
+
+// Test second set of values
+if (match(value3, value4)) {
   logMatch(value3, value4);
 } else {
   logMismatch(value3, value4);
 }
-if (matchWithTwoParameters(value5, value6)) {
+
+// Test third set of values
+if (match(value5, value6)) {
   logMatch(value5, value6);
 } else {
   logMismatch(value5, value6);
