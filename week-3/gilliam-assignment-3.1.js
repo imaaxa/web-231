@@ -24,8 +24,7 @@ console.log(header.display('Cory', 'Gilliam', 'Exercise 3.1'));
   6 times arround the turn about means you do not know how to use it.
   * Random number of statements about the random number *
 
-  Thank you
-  for playing.Good bye.
+  Thank you for playing. Good bye.
 */
 
 // Functions:
