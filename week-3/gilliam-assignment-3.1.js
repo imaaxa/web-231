@@ -12,16 +12,20 @@
 
 // The header file, & output, to be included with all JS programs for this course/cohort.
 const header = require('../gilliam-header.js');
-console.log(header.display('Cory', 'Gilliam', 'Exercise 3.4'));
+console.log(header.display('Cory', 'Gilliam', 'Exercise 3.1'));
 
 /*
   Expected output:
 
   FirstName LastName
-  Assignment 3.4
+  Assignment 3.1
   Today's Date
 
+  6 times arround the turn about means you do not know how to use it.
+  * Random number of statements about the random number *
 
+  Thank you
+  for playing.Good bye.
 */
 
 // Functions:
