@@ -8,15 +8,17 @@ Introduction to JavaScript
 
 Week 1
 ------
-* Chapter 1: Introduction to JavaScript
+* **Chapter 1**: *Introduction to JavaScript*
   * Core JavaScript
   * Client-Side JavaScript
+  
 * Chapter 2: Lexical Structure
   * Character Set
   * Comments
   * Literals
   * Identifiers and Reserved Words
   * Optional Semicolons
+  
 * Chapter 3: Types, Values, and Variables
   * Numbers
   * Text
