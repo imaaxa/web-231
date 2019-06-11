@@ -55,7 +55,7 @@ message = 'Welcome ' + name;
 /*
   - switch comparison value needs to be a value that is not a boolean: in this case age
   - case values need to be inside () and followed by :
-  - switch statement is declared switch ( expression ) { case value: }, the curley braces are part of the declartation
+  - switch statement is declared switch ( expression ) { case value: }, the curly braces are part of the declaration
 */
 switch (age) {
   case (age < 50):
@@ -77,8 +77,8 @@ switch (age) {
  * //recursive loop call, out of scope of this lesson
  */
 /*
-  - Since this function is not to be used again, it can be anonymous.
-  - You can define and invoke an anonymous function. Page 179, second example
+  - Since this function is not to be used again, it can be declared as anonymous.
+  - You can define and invoke an anonymous function in single statement. Page 179, second example
 */
 (function count(countVal) {
   if (countVal > 1) {
