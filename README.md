@@ -54,4 +54,19 @@ Week 3
   * Jumps
   * Miscellaneous Statements
   * Summary of JavaScript Statements
-  
+
+Week 4
+------
+* **Chapter 7**: *Arrays*
+  * Creating Arrays
+  * Reading and Writing Array Elements
+  * Sparse Arrays
+  * Array Length
+  * Adding and Deleting Array Elements
+  * Itterating Arrays
+  * Multidimensional Arrays
+  * Array Methods
+  * ECMAScript 5 Array Methods
+  * Array Type
+  * Array-Like Objects
+  * Strings As Arrays
