@@ -45,29 +45,30 @@ console.log(header.display('Cory', 'Gilliam', 'Exercise 4.3') + '\n');
  * @param {array} hayStack
  * @param {string} (optional) needle
  */
-function getValue(hayStack, needle) {
+function getValue(hayStack, needle = true) {
   // Use variable to limit length check
   var len = hayStack.length;
-  var needleLower = needle.toLowerCase();
+  var printAll = (needle == true) ? true : false;
 
   // Iterate the array
   for (let index = 0; index < len; index++) {
     // Check array at current index matches value for this iteration
     if (hayStack[index] == needle) {
       console.log('--SELECTED VALUE--\n' + hayStack[index]);
-    } else if (needleLower == 'all' || needle == '' || needle == undefined) {
-      // This else / if Gives the ability to print out all array values
-      if (index == 0) {
-        console.log('--DISPLAYING ARRAY ITEMS--');
-      }
+    } else if (printAll) {
+      // This print out all every element of the array if needle is undefined
+      (index == 0) ? console.log('--DISPLAYING ARRAY ITEMS--') : null;
       console.log(hayStack[index]);
     }
   }
+  console.log('\n');
 }
 
 // Variables:
 var vehicles = ['Car', 'Truck', 'Motorcycle', 'Airplane', 'Bus',];
 
+getValue(vehicles);
 getValue(vehicles, 'Motorcycle');
+getValue(vehicles, 'Bus');
 
 // End program:
