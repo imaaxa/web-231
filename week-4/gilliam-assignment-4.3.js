@@ -40,7 +40,7 @@ console.log(header.display('Cory', 'Gilliam', 'Exercise 4.3') + '\n');
 /**
  * Iterate over an array and will console log matching value in array
  * or
- * needle value of All, {empty string}, undefined, will console log each element in array
+ * Empty needle value will console log each element in array
  *
  * @param {array} hayStack
  * @param {string} (optional) needle
