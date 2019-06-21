@@ -44,50 +44,35 @@ console.log(header.display('Cory', 'Gilliam', 'Exercise 4.4') + '\n');
 /**
  * Console logs array items that start with the same letter given.
  *
- * @param {array} items
- * @param {string} filterValue
+ * @param {string} argument1
+ * @param {string} argument2
  */
-function getValue(items, filterValue) {
-  for (let index = 0; index < items.length; index++) {
-    if (predicate(items[index], filterValue)) {
-      console.log(items[index]);
-    }
-  }
+function getValue(argument1, argument2) {
+  return argument1[0].toLocaleUpperCase() == argument2;
 }
 
 /**
- * Iterate over an array and console log each element.
- *
- * @param {array} items
+ * Logs a new line
  */
-function printValues(items) {
-  for (let index = 0; index < items.length; index++) {
-    console.log(items[index]);
-  }
+function n() {
   console.log('\n');
 }
 
-/**
- * Compares the first letters of two values
- *
- * @param {string} value1
- * @param {string} value2
- *
- * @returns {bool} true / false
- */
-function predicate(value1, value2) {
-  return (value1[0].toLowerCase() == value2[0].toLowerCase()) ? true : false;
-}
-
 // Variables:
-var states = ['Alabama', 'Nebraska', 'Iowa', 'California', 'Nevada',];
+var states = ['Alabama', 'Nebraska', 'Iowa', 'California', 'Nevada'];
 
+// Log the array
 console.log('--ORIGINAL ARRAY--');
-printValues(states);
+states.forEach(item => console.log(item));
+n();
 
+// Log the sorted array
 console.log('--SORTED ARRAY--');
-printValues(states.sort());
+states.sort().forEach(item => console.log(item));
+n();
 
+// Log the all elements that start with the letter I
 console.log('--SELECTED VALUE--');
-getValue(states, 'i');
+states.filter(state => getValue(state, 'I')).forEach(item => console.log(item));
+
 // End program:
