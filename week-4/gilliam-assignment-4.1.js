@@ -21,7 +21,7 @@ console.log(header.display('Cory', 'Gilliam', 'Exercise 4.1') + '\n');
   Exercise 4.2
   Today 's Date
 
-  Hello, I am {name}.I live in the great state of {state name}.
+  Hello, I am {name}. I live in the great state of {state name}.
 */
 
 // Functions:
