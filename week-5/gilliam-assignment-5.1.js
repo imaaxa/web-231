@@ -4,7 +4,7 @@
 ; Author: Cory Gilliam
 ; Date:   25 June 2019
 ; Modified By:
-; Description: Program with two errors.
+; Description: Program with two map errors.
 ;===========================================
 */
 
@@ -35,7 +35,7 @@ var message = new Array();
 // Turn the stateKey and state arrays into a map key/value collection
 var states = new Map();
 for (var i = 0; i < stateKey.length; i++) {
-  states.set(stateKey[i], state[i]);
+  states.insertInto(stateKey[i], state[i]);
 }
 
 // Add message sections
@@ -55,9 +55,9 @@ while (run) {
   stateIn = 'Tn'.trim().toUpperCase(); // <- Use this line if testing in VS Code. Change Tn to what ever state abbreviation you like. Comment out previous line
 
   // Test states map for presence of state abbreviation key
-  // Break loop if present
-  // Notify user of options if false
-  if(states.has(stateIn)) {
+  //  - Break loop if present
+  //  - Notify user of usable options if false
+  if(states.hasAsKey(stateIn)) {
     run = false;
   } else {
     //alert('Here is a list of state abbreviations to choose from:\n' + stateKey.join(', '));     // <- Use this line if running in browser. Comment out next line
