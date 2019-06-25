@@ -4,7 +4,7 @@
 ; Author: Cory Gilliam
 ; Date:   25 June 2019
 ; Modified By:
-; Description:
+; Description: Using the forEach() function, iterate over the composer objects and output the results.
 ;===========================================
 */
 
