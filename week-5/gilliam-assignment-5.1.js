@@ -11,8 +11,8 @@
 // Start program:
 
 // The header file, & output, to be included with all JS programs for this course/cohort.
-//const header = require('../gilliam-header.js');
-//console.log(header.display('Cory', 'Gilliam', 'Discussion 4.1') + '\n');
+const header = require('../gilliam-header.js');
+console.log(header.display('Cory', 'Gilliam', 'Discussion 4.1') + '\n');
 
 /*
   Expected output:
