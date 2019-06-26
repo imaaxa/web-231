@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title:  Discussion-5.2.js
+; Title:  Discussion-5.3.js
 ; Author: Cory Gilliam
 ; Date:   25 June 2019
 ; Modified By:
@@ -12,7 +12,7 @@
 
 // The header file, & output, to be included with all JS programs for this course/cohort.
 const header = require('../gilliam-header.js');
-console.log(header.display('Cory', 'Gilliam', 'Assignment 5.2') + '\n');
+console.log(header.display('Cory', 'Gilliam', 'Assignment 5.3') + '\n');
 
 /*
   Expected output:
