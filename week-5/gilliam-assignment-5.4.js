@@ -4,7 +4,7 @@
 ; Author: Cory Gilliam
 ; Date:   25 June 2019
 ; Modified By:
-; Description: Using the forEach() function, iterate over the array and output the results.
+; Description: Use the map() method to filter out the unwanted fields
 ;===========================================
 */
 
