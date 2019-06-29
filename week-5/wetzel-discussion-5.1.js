@@ -33,7 +33,7 @@ console.log(header.display('Cory', 'Gilliam', 'Discussion 5.1') + '\n'); //conso
 //start program
 
 //array of objects
-var names = [ // need the var keyword when declairing varialbes
+var names = [ // need the var keyword when declaring variables
   {
     fName: "Loren",
     lName: "Wetzel"
