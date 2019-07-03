@@ -9,3 +9,7 @@ node_module
 
 # Os X
 .DS_Store
+*.jpg
+*.jpeg
+*.png
+*.psd
