@@ -11,14 +11,14 @@ Week 1
 * **Chapter 1**: *Introduction to JavaScript*
   * Core JavaScript
   * Client-Side JavaScript
-  
+
 * **Chapter 2**: *Lexical Structure*
   * Character Set
   * Comments
   * Literals
   * Identifiers and Reserved Words
   * Optional Semicolons
-  
+
 * **Chapter 3**: *Types, Values, and Variables*
   * Numbers
   * Text
@@ -42,7 +42,7 @@ Week 2
   * Closures
   * Function Properties, Methods, and Constructor
   * Functional Programming
-  
+
 Week 3
 ------
 * **Chapter 5**: *Statements*
@@ -70,3 +70,24 @@ Week 4
   * Array Type
   * Array-Like Objects
   * Strings As Arrays
+
+Week 5
+------
+* *Arrays and Operators*
+  * MDN Keyed collections, MDN Web Docs, developer.mozilla.org, 2017
+  * MDN Map, MDN Web Docs, developer.mozilla.org, 2017
+  * MDN Set
+
+Week 6
+------
+* **Chapter 6**: *Objects*
+  * Creating Objects
+  * Querying and Setting Properties
+  * Deleting Properties
+  * Testing Properties
+  * Enumerating Properties
+  * Property Getters and Setters
+  * Property Attributes
+  * Object Attributes
+  * Serializing Objects
+  * Object Methods
