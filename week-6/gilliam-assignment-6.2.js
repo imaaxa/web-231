@@ -29,6 +29,9 @@ console.log(header.display('Cory', 'Gilliam', 'Exercise 6.2') + '\n');
 function getData() {
   var existingValue = 23;
 
+  // This will return the two values multiplied together
+  // Will display an error if there is a problem with variables
+  // Will display a final message after error is displayed
   try {
     return existingValue * nonexistingValue;
   } catch (err) {
