@@ -18,7 +18,7 @@ console.log(header.display('Cory', 'Gilliam', 'Exercise 6.2') + '\n');
   Expected output:
 
   FirstName LastName
-  Exercise 5.2
+  Exercise 6.2
   Today's Date
 
   Catch clause: < your custom message goes here >
