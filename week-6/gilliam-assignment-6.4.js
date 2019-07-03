@@ -44,7 +44,7 @@ var ticket = {
 
 // Output message:
 console.log(
-  'Ticket ' + ticket.id + ' was created on ' + ticket.date + ' and assigned to employee ' + ticket.person.firstName + '  ' + ticket.person.lastName + ' ( ' + ticket.person.jobTitle + ' ).',
+  'Ticket ' + ticket.id + ' was created on ' + ticket.date + ' and assigned to employee ' + ticket.person.firstName + ' ' + ticket.person.lastName + ' ( ' + ticket.person.jobTitle + ' ).',
 );
 
 // End program:
