@@ -19,8 +19,8 @@ var person = {
   age     : 37,
   eyeColor  : "Black"
 };
-console.log("\nMy full Name " + person.firstName + " " + person.lastName); // Line 21: Trying to access the person properties incorrectly, the object goes first followed by a dot (.) followed by the property name
-console.log("my last name " + person.lastName + " my age is " + person.age); // Line 22: Trying to access the person properties incorrectly, the object goes first followed by a dot (.) followed by the property name
+console.log("\nMy full Name " + person.firstName + " " + person.lastName); // Line 21: Trying to access the person properties incorrectly, the object name goes first followed by a dot (.) followed by the object's property name
+console.log("my last name " + person.lastName + " my age is " + person.age); // Line 22: Trying to access the person properties incorrectly, the object name goes first followed by a dot (.) followed by the object's property name
 
 /*
   Expected output:
