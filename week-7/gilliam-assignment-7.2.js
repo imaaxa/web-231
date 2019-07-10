@@ -22,7 +22,7 @@ console.log(header.display('Cory', 'Gilliam', 'Exercise 7.2') + '\n');
   Today's Date
 
   Employee ID: 1, Name: Gandalf The Grey, Title: Wizard
-  Employee ID: 2, Name: Frodo Baggins, Title: Ring Bear
+  Employee ID: 2, Name: Frodo Baggins, Title: Ring Bearer
   Employee ID: 3, Name: Samwise Gamged, Title: Best Friend
   Employee ID: 4, Name: Meriadoc Brandybuck, Title: Friend
   Employee ID: 5, Name: Peregrin Took, Title: Friend
