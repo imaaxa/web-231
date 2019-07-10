@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gilliam: Exercise 7.3</title>
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+
+<div id="list"></div>
+<script>
+  // Functions:
+  function wrap(tag, data) {
+    return '<' + tag + '>' + data + '</' + tag + '>';
+  }
+
+  // Variables
+  var fruits = [
+    'Oranges', 'Apples', 'Pears', 'Limes', 'Lemons'
+  ]
+  var domContainer = document.getElementById('list');
+  var itemsList = '';
+  var itemsTable = '';
+  var itemsTableItems = '';
+  var index = 1;
+
+  // Build the list of li wrapped fruit
+  fruits.forEach(fruit => {
+    itemsList += wrap('li', fruit);
+  });
+
+  // Add table header data
+  itemsTable += wrap('thead', wrap('tr', wrap('th', 'Id') + wrap('th', 'Item')));
+
+  // Build table body information
+  fruits.forEach(fruit => {
+    itemsTableItems += wrap('tr', wrap('td', index++) + wrap('td', fruit));
+  });
+
+  // Add the table body data
+  itemsTable += wrap('tbody', itemsTableItems);
+
+  // Output message:
+  domContainer.innerHTML = wrap('ol', itemsList) + '\n' + wrap('table', itemsTable);
+
+  // End program:
+</script>
+</body>
+</html>
