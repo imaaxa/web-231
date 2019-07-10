@@ -43,7 +43,7 @@ function Employee(id, firstName, lastName, title) {
 var employees = [
   new Employee(1,"Gandalf","The Grey","Wizard"),
 
-  new Employee(2,"Frodo","Baggins","Ring Bear"),
+  new Employee(2, "Frodo", "Baggins", "Ring Bearer"),
 
   new Employee(3,"Samwise","Gamged","Best Friend"),
 

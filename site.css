@@ -25,3 +25,7 @@ th {
 tr:nth-child(even) {
   background-color: lightsteelblue;
 }
+
+.right {
+  text-align: right;
+}
