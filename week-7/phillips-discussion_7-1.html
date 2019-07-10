@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"><!-- lang tag was missing -->
+<head>
+    <title>Phillips: Week 7: Discussion 7.1: Program with 2 errors.</title><!-- Title was missing -->
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Display Object &amp; Arrray</h1>
+    <p id="object"></p>
+    <p id="array"></p>
+
+    <script>
+        /*
+		;===========================================================================================================================================
+		; Title:  phillips-discusssion-7.1.js
+		; Author: Ernie Phillips
+		; Date:   02 July 2019
+		; Modified By: Cory Gilliam
+		; Description: create an HTML page that modifies element tags
+		;===========================================================================================================================================
+		*/
+        //start main
+
+        //create object literal
+        var dog = {
+            ears: "brown",
+            tail: "white and brown",
+            belly: "white",
+            back: "brown"
+        };
+
+        //create an array of cats
+        var cats = [
+            "Maine Coon",
+            "American Shorthair",
+            "Persian",
+            "Egyptian Mau",
+            "Norwegian Forest Cat"
+        ];
+
+        //sort the array alphabetically
+        cats.sort();
+
+        //find object selector and output results of dog object
+        document.getElementById('object').innerText = "The color of the dogs ears are " + dog.ears + ", tail is " + dog.tail + ", belly is " + dog.belly + ", and back is " + dog.back + "."; // Line 46: dog.bell is not a property of dog. Changed to dog.belly
+
+        //find array selector and output results of cat array with foreach loop
+        cats.forEach(function(value, index, traversedObject){ // Line 49: the anonymous function was missing a , between arguments
+            document.getElementById('array').innerHTML += value + "<br />";
+        });
+        //end main
+    </script>
+</body>
+</html>
