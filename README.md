@@ -91,3 +91,28 @@ Week 6
   * Object Attributes
   * Serializing Objects
   * Object Methods
+
+Week 7
+------
+* [**Chapter 13**: *JavaScript in Web Browsers*](https://github.com/imaaxa/web-231/tree/master/week-7)
+  * Client-Side JavaScript
+  * Embedding JavaScript in HTML
+  * Execution of JavaScript Programs
+  * Compatibility and Interoperability
+  * Accessibility
+  * Security
+  * Client-Side Frameworks
+
+Week 8
+------
+* **Chapter 19**: *The jQuery Library
+  * jQuery Basics
+  * jQuery Getters and Setters
+  * Altering Document Structure
+  * Handling Events with jQuery
+  * Animated Effects
+  * Ajax with jQuery
+  * Utility Functions
+  * jQuery Selectors and Selection Methods
+  * Extending jQuery with Plug-ins
+  * The jQuery UI Library
