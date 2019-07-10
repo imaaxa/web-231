@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gilliam: Exercise 7.4</title>
+    <link rel="stylesheet" href="../site.css">
+  </head>
+
+  <body>
+    <div id="list"></div>
+
+    <script>
+      /*
+      ============================================
+      ; Title: Assignment-7.4.js
+      ; Author: Cory Gilliam
+      ; Date: 10 July 2019
+      ; Modified By:
+      ; Description: Output an HTML table, including links with event listeners
+      ;===========================================
+      */
+
+      // Functions:
+      /**
+        * Build a Component object
+        *
+        * @param {int} id
+        * @param {string} name
+        * @param {float} amount
+        */
+      function Component(id, name, amount) {
+        this.id = id;
+        this.name = name;
+        this.amount = amount;
+      }
+
+      /**
+        * Wrap text with html tag and inject tag with attributes as needed
+        *
+        * @param {string} tag
+        * @param {string} data
+        * @param {string} attributes
+        */
+      function wrap(tag, data, attributes) {
+        // Revision note: Attributes should be a key: value pair array with values being an array
+        attributes === undefined ? attributes = '' : attributes = ' ' + attributes;
+
+        return '<' + tag + attributes + '>' + data + '</' + tag + '>' ;
+      }
+
+      /**
+       * Handle table click events
+       *
+       * @param {object} e
+       */
+      function edit_delete(e) {
+        e.preventDefault();                                   // Stop link from firing
+        var href = e.target.attributes.href.value;            // Get the href value
+        var id = href.substr(href.indexOf('id=') + 3);        // Get the id of the link clicked
+        var action = href.includes('edit') ? 'edit':'delete'; // Get the action called for by the link clicked
+        var message = action == 'edit' ? 'This site says...\n' + id:'Are you sure?';// Set message based upon action, send alert
+        alert(message);
+      }
+
+      // Variables:
+      var components = [
+        new Component(1, 'Laptop', 1500.99),
+        new Component(2, 'Motherboard', 35.70),
+        new Component(3, 'Monitor', 174.99),
+        new Component(4, 'Mouse', 13.99),
+        new Component(5, 'Keyboard', 14.50)
+      ];
+      var domContainer = document.getElementById('list');
+      var itemsTable = '';
+      var itemsTableItems = '';
+
+      // Add table header data, with WAI-ARIA tags
+      itemsTable += wrap('thead', wrap('tr',
+        wrap('th', 'Id', 'scope="col"') +
+        wrap('th', 'Name', 'scope="col"') +
+        wrap('th', 'Amount', 'scope="col"') +
+        wrap('th', 'Functions', 'scope="col"')
+      ));
+
+      // Build table body rows
+      components.forEach(component => {
+        itemsTableItems +=
+        wrap('tr',
+          wrap('td', component.id, 'class="right"') +
+          wrap('td', component.name) +
+          wrap('td', component.amount.toFixed(2), 'class="right"') +
+          wrap('td',
+            wrap('a', 'Edit',   'href="?action=edit&&id='   + component.id + '"') +
+            ' | ' +
+            wrap('a', 'Delete', 'href="?action=delete&&id=' + component.id + '"'))
+          );
+      });
+
+      // Add the table body data
+      itemsTable += wrap('tbody', itemsTableItems);
+
+      // Output message:
+      domContainer.innerHTML = wrap('table', itemsTable, 'aria-label="List of ' + components.length + ' computer components" id="computer_components"');
+
+      // Event Listeners
+      var links = domContainer.querySelectorAll("#computer_components a");
+      links.forEach(link => {
+        link.addEventListener("click", edit_delete, false);
+      });
+
+      // End program:
+    </script>
+  </body>
+</html>
