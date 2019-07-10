@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vanroekel: Week 7: Discussion 7.1: Program with 2 errors.</title>
+  </head>
+  <body>
+    <h1 id="id01">Old Ice Cream Flavors</h1>
+    <p id="p1">We Love Ice Cream!</p>
+    <script>
+      /*
+      ============================================
+      ; Title:  Exercise 7.1 JavaScript in Web Browsers
+      ; Author: Faye Van Roekel
+      ; Date:   09 July 2019
+      ; Modified by:
+      ; Description: JavaScript in Web Browsers
+      ;===========================================
+      */
+      var element = document.getElementById("id01"); // Line 9: Element with an id of id02 is not present in HTML, changed to id01
+      element.innerHTML = "New Flavors Available!";
+      document.getElementById("p1").innerHTML = 'Stop in now for a great treat!'; // Line 11: String needs to be inside of single or double quotes.
+    </script>
+  </body>
+</html>
