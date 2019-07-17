@@ -1,0 +1,80 @@
+<!--
+============================================
+; Title: Exercise-8.2.html
+; Author: Cory Gilliam
+; Date: 16 July 2019
+; Modified By:
+; Description: Use JavaScript to iterate over an array of fruit and output the results to the DOM in an unordered list
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gilliam: Exercise 8.2</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    ul {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      list-style: none;
+      margin: 0 auto;
+      width: 60px;
+    }
+    ul::before {
+      background-color: red;
+      content: '';
+      display: inline-block;
+      height: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="fruits"></div>
+
+  <script>
+    // Variables:
+    var output = '';
+    var fruit = [
+      {
+        id: 'apple',
+        type: 'apple'
+      },
+      {
+        id: 'orange',
+        type: 'orange'
+      },
+      {
+        id: 'pair',
+        type: 'pair'
+      },
+      {
+        id: 'grapes',
+        type: 'grapes'
+      },
+      {
+        id: 'plumb',
+        type: 'plumb'
+      },
+    ];
+
+    // Build the output
+    output += '<h2>List of fruit</h2>';
+    output += '<ul id="fruit">';
+    fruit.forEach(item => {
+      output += '<li id="' + item.id + '">' + item.type + '</li>';
+    });
+    output += '</ul>';
+
+    // Output:
+    document.getElementById('fruits').innerHTML = output;
+
+  </script>
+</body>
+</html>
