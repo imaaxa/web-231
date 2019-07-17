@@ -129,17 +129,16 @@
       },
     ];
 
-    // Build the output
+    // Build the table output
     output += '<table id="fruit">';
     fruit.forEach(item => {
       output += '<tr><td id="' + item.id + '" class="foo">' + item.type + '</td></tr>';
     });
     output += '</table>';
-console.log(output);
 
     // Output:
     $(".toggle").after(output);
-
+    // Add event listners
     $(".foo").on('click', function() {
       alert('Id: ' + $(this).attr('id') + ' Type: ' + $(this).text());
     });
