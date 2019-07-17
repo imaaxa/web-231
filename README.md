@@ -105,7 +105,7 @@ Week 7
 
 Week 8
 ------
-* **Chapter 19**: *The jQuery Library
+* [**Chapter 19**: *The jQuery Library](https://github.com/imaaxa/web-231/tree/master/week-8)
   * jQuery Basics
   * jQuery Getters and Setters
   * Altering Document Structure
