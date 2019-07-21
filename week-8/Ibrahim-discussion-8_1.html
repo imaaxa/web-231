@@ -1,0 +1,71 @@
+<!--
+============================================
+; Title:  Ibrahim-Error.html
+; Author: Alsaddig Ibrahim
+; Date: July 17, 2019
+; Modified By: Cory Gilliam
+; Description: Demonstrates the use of jQuery
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 5px;
+      }
+      th {
+        background-color: steelblue;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: lightsteelblue;
+      }
+      p {
+        padding: .5em 1em;
+      }
+    </style>
+      <meta charset="UTF-8">
+      <title>Discussion 8.1: Two Error Problem</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="../site.css">
+  </head>
+  <body>
+    <p>Welcome to Bellevue University!</p>
+
+    <table>
+      <tr>
+        <td><a href="#" class="studentId">1</a></td>
+        <td>Alsaddig Ibrahim</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="studentId">2</a></td>
+        <td>Adam Ibrahim</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="studentId">3</a></td>
+        <td>Mohamed Ali</td>
+      </tr>
+    </table>
+
+    <script>
+      $("p").click(function () {// there is no HTML tag "h". Changed the call to be the p tag at the beginning of the document.
+        $(this).css("background-color", "red");
+        $(this).css("color", "white");
+      });
+
+      $(".studentId").click(function (event) {// studentId is never used as an id, but it was used as a class. The # was changed to a . in order to select the elemtents with this class.
+        event.preventDefault();
+        var studentId = $(this).text();
+        var studentName = $(this).closest("td").next().text();
+        alert("Student_ID: " + studentId + "\nStudent_Name: " + studentName);
+      });
+    </script>
+  </body>
+</html>
