@@ -1,0 +1,151 @@
+<!--
+============================================
+; Title: Discussion-8.1.html
+; Author: Cory Gilliam
+; Date: 16 July 2019
+; Modified By:
+; Description: A jQuery appliction with two errors
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gilliam: Discussion 8.1</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style type="text/css">
+    .hide {
+      display: none;
+    }
+    .toggle {
+      padding: .5em 1.25em;
+      border-radius: 4px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border: none;
+      background-color: rgb(223, 117, 20);
+      color: #fff;
+      border: 1px solid transparent;
+    }
+    .toggle:hover,
+    .toggle:focus {
+      background-color: rgb(191, 98, 17);
+    }
+    .toggle:active {
+      color: rgb(223,117,20);
+      background-color: transparent;
+      border-color: rgb(223,117,20);
+    }
+    .foo {
+      cursor: pointer;
+    }
+    td {
+      color: #fff;
+      padding: .5em 1em;
+      text-decoration-color: rgba(255,255,255,0);
+      text-decoration-line: underline;
+    }
+    td:hover {
+      text-decoration-color: rgba(255,255,255,1);
+    }
+    td:active {
+      color: rgb(223,117,20);
+      background-color: #fff;
+    }
+    tr:nth-child(2n-1) {
+      background-color: rgb(242, 128, 21);
+    }
+    tr:nth-child(2n) {
+      background-color: rgb(185, 100, 20);
+    }
+    table {
+      margin: 20px 0 20px 20px;
+    }
+    table::before {
+      background-color: rgb(223, 117, 20);
+      content: '';
+      display: inline-block;
+      height: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lorem ipsum title</h1>
+  <p class="hide_and_go_show">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac nibh vitae magna fermentum interdum ut eu est.
+    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque at
+    consequat arcu. Sed rutrum libero fringilla rhoncus dictum. Ut a consectetur lorem. Interdum et malesuada fames ac
+    ante ipsum primis in faucibus. Integer congue, sapien eget vestibulum tempor, tellus magna tristique lectus, in
+    auctor metus nisi a turpis. Donec nec orci semper velit vulputate interdum vitae non enim. Aliquam arcu neque,
+    sagittis sed rutrum imperdiet, dapibus vitae leo. Phasellus convallis nisl non mi tincidunt, ut auctor erat
+    imperdiet. Nunc ultricies congue orci eu feugiat. Ut vitae lacinia sem, quis tristique massa. Morbi nec convallis
+    arcu, eget pellentesque erat. Phasellus id condimentum est.
+  </p>
+  <button name="Toggle" class="toggle">Hide</button>
+
+  <script>
+    // Part A:
+    // Attach an event handler
+    $(".toggle").on("click", function(event) {
+      // Prevent the default button action
+      event.preventDefault();
+
+      // Assign the p tag befor the button to this variable
+      var paragraph = $(this).prev();
+
+      // Toggle the hide class on and off
+      paragraph.switchClass("hide");
+
+      // Toggle the button text based upon the presence of the hide class
+      paragraph.hasClass("hide") ? $(this).text("Show") : $(this).text("Hide");
+    });
+
+    // Part B: (FYI: There are only 2 "jQuery" errors in the application.)
+    // Variables:
+    var output = '';
+    var fruit = [
+      {
+        id: 'red-tree',
+        type: 'apple'
+      },
+      {
+        id: 'orange-tree',
+        type: 'orange'
+      },
+      {
+        id: 'green-tree',
+        type: 'pair'
+      },
+      {
+        id: 'purple-vine',
+        type: 'grapes'
+      },
+      {
+        id: 'purple-tree',
+        type: 'plumb'
+      },
+    ];
+
+    // Build the table output
+    output += '<table id="fruit">';
+    fruit.forEach(item => {
+      output += '<tr><td id="' + item.id + '" class="foo">' + item.type + '</td></tr>';
+    });
+    output += '</table>';
+
+    // Output:
+    $(".toggle").after(output);
+
+    // Add event listners
+    $(".foo").on('click', function() {
+      alert('Id: ' + $(this).attribute('id') + ' Type: ' + $(this).text());
+    });
+  </script>
+</body>
+</html>
