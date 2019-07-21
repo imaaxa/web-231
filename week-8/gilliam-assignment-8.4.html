@@ -1,0 +1,117 @@
+<!--
+============================================
+; Title: Assignment-8.4.html
+; Author: Cory Gilliam
+; Date: 20 July 2019
+; Modified By:
+; Description: Putting it all together
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 8.4</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- you will need to the href to point to your root directories css file -->
+    <!--<link rel="stylesheet" href="/path/to/your/root/css/file">-->
+
+    <style type="text/css">
+      #employee tbody tr:hover {
+        cursor: pointer;
+        background-color: #ffff99;
+      }
+      table, th, td {
+        border: 1px solid #d4e2ec;
+      }
+      table {
+        border-collapse: collapse;
+        border-left: 0;
+      }
+      td, th {
+        border-bottom: 0;
+        border-right: 0;
+      }
+      th {
+        background-color: #4987ba;
+        color: #ffffff;
+      }
+      tr:nth-child(2n-1) {
+        background-color: #b5cae5;
+      }
+      tr:hover {
+        background-color: #feff9c;
+      }
+      td {
+        padding: .25em .5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="emps"></div>
+    <script type="text/javascript">
+      // Functions
+      function alertThePress(employee) {
+        alert('This site says...\n' + employee.id + ' ' + employee.firstName + ' ' + employee.lastName + ' ' + employee.title);
+      }
+      // Variables:
+        var employees = [
+          {
+            id: 1,
+            firstName: 'Thomas',
+            lastName: 'Edison',
+            title: 'Software Engineer'
+          },
+          {
+            id: 2,
+            firstName: 'Benjamin',
+            lastName: 'Franklin',
+            title: 'Programmer'
+          },
+          {
+            id: 3,
+            firstName: 'Nikola',
+            lastName: 'Tesla',
+            title: 'Project Manager'
+          },
+          {
+            id: 4,
+            firstName: 'Charles',
+            lastName: 'Babbage',
+            title: 'Product Manager'
+          },
+          {
+            id: 5,
+            firstName: 'Alexander',
+            lastName: 'Bell',
+            title: 'Business Analyst'
+          },
+        ]
+        var output = '';
+
+        output += '<table><tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Title</th></tr>';
+
+        employees.forEach(employee => {
+          output += '<tr>';
+            output += '<td>' + employee.id + '</td>' + '<td>' + employee.firstName + '</td>' + '<td>' + employee.lastName + '</td>' + '<td>' + employee.title + '</td>';
+          output += '</tr>';
+        });
+        output += '</table>';
+
+        document.getElementById("emps").innerHTML = output;
+
+        // jQuery onClick event
+        // Don't remove this, just add your code to the body of the event (curly braces)
+        $(function () {
+          $("table tr").click(function () {
+            var employeeId = $(this).find('td:first-child').text();
+            alertThePress(employees[(--employeeId)]);
+          });
+        });
+    </script>
+  </body>
+</html>
