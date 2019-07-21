@@ -43,8 +43,10 @@
       tr:nth-child(2n-1) {
         background-color: #b5cae5;
       }
-      tr:hover {
+      tr:hover,
+      tr:focus {
         background-color: #feff9c;
+        cursor: pointer;
       }
       td {
         padding: .25em .5em;
@@ -55,61 +57,76 @@
     <div id="emps"></div>
     <script type="text/javascript">
       // Functions
+      /**
+       * Creates an alert from the employee object argument
+       * @param  {object} employee - object with id, first name, last name, and a title
+       */
       function alertThePress(employee) {
         alert('This site says...\n' + employee.id + ' ' + employee.firstName + ' ' + employee.lastName + ' ' + employee.title);
       }
+
+      // Constructor function
+      /**
+       * Creates and returns an Employee object
+       *
+       * @param {int} id [description]
+       * @param {string} firstName [description]
+       * @param {string} lastName [description]
+       * @param {string} title [description]
+       */
+      function Employee(id, firstName, lastName, title) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.title = title;
+      }
+
+      /**
+       * Returns the int value of the first cell of the table row
+       * @param  {obj} package - jQuery object containing HTML table row data
+       * @return {int} The ID of the row
+       */
+      function getId(package) {
+        return package.find('td:first-child').text() - 1;
+      }
+
       // Variables:
-        var employees = [
-          {
-            id: 1,
-            firstName: 'Thomas',
-            lastName: 'Edison',
-            title: 'Software Engineer'
-          },
-          {
-            id: 2,
-            firstName: 'Benjamin',
-            lastName: 'Franklin',
-            title: 'Programmer'
-          },
-          {
-            id: 3,
-            firstName: 'Nikola',
-            lastName: 'Tesla',
-            title: 'Project Manager'
-          },
-          {
-            id: 4,
-            firstName: 'Charles',
-            lastName: 'Babbage',
-            title: 'Product Manager'
-          },
-          {
-            id: 5,
-            firstName: 'Alexander',
-            lastName: 'Bell',
-            title: 'Business Analyst'
-          },
-        ]
+        var employees = new Array(5);
+        employees[0] = new Employee(1, 'Thomas', 'Edison', 'Software Engineer');
+        employees[1] = new Employee(2, 'Benjamin', 'Franklin', 'Programmer');
+        employees[2] = new Employee(3, 'Nikola', 'Tesla', 'Project Manager');
+        employees[3] = new Employee(4, 'Charles', 'Babbage', 'Product Manager');
+        employees[4] = new Employee(5, 'Alexander', 'Bell', 'Business Analyst');
         var output = '';
 
-        output += '<table><tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Title</th></tr>';
+        // Builds the HTML table with ARIA attributes
+        output += '<table role="table"><caption class="table-caption">Clickable list of employees.</caption><thead><tr role="row"><th role="columnheader">Id</th><th role="columnheader">First Name</th><th role="columnheader">Last Name</th><th role="columnheader">Title</th></tr></thead><tbody>';
 
         employees.forEach(employee => {
-          output += '<tr>';
-            output += '<td>' + employee.id + '</td>' + '<td>' + employee.firstName + '</td>' + '<td>' + employee.lastName + '</td>' + '<td>' + employee.title + '</td>';
+          output += '<tr role="row" tabindex="' + employee.id + '">';
+            output += '<td role="cell">' + employee.id + '</td>' + '<td role="cell">' + employee.firstName + '</td>' + '<td role="cell">' + employee.lastName + '</td>' + '<td role="cell">' + employee.title + '</td>';
           output += '</tr>';
         });
-        output += '</table>';
+        output += '</tbody></table>';
 
+        // Place the table inside the element with the id of emps
         document.getElementById("emps").innerHTML = output;
 
         // jQuery onClick event
         // Don't remove this, just add your code to the body of the event (curly braces)
         $(function () {
+
+          // Triggers a function when a row in the table is click on
           $("table tr").click(function () {
-            var employeeId = $(this).find('td:first-child').text();
-            alertThePress(employees[(--employeeId)]);
+            alertThePress(employees[getId($(this))]);
+          });
+
+          // Triggers a function when a row in the table is in focus and return/enter is pressed
+          $("table tr").keypress(function (event) {
+            // Only trigger if return/enter key is pressed
+            if (event.which == 13) {
+              alertThePress(employees[getId($(this))]);
+            }
           });
         });
     </script>
